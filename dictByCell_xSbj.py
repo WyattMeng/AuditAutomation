@@ -15,6 +15,7 @@ import sys
 path = r'C:\Users\mmmkk\Desktop\测试\tst.xlsx'.decode('utf-8')
 print path
 from xlrd import open_workbook
+import openpyxl
 wb = open_workbook(path)
 print wb.sheet_names()
 ws = wb.sheet_by_index(0)
@@ -72,6 +73,18 @@ def xxx(worksheet):
                 i+=1
                 
     print dict[0]['value']            
+
+dict = xxx(ws)
+pathd = r'C:\Users\mmmkk\Desktop\测试\GET.xlsx'.decode('utf-8')
+wbx = openpyxl.load_workbook(pathd)
+wsx = wbx.get_sheet_by_name(u'BS_资产')
+#for k in dict:
+#    pass
+    #dict[k]['value']
+    #wsx.cell(row=xbase,column=ybase).value = cell
+print wsx['D2'].value
+print wbx['Instraction']['B1'].value
+#wbx.save(pathd)
 
 
 #list二级subject name
