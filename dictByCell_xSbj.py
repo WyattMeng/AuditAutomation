@@ -103,7 +103,7 @@ for k in dict:
 
             if cell.value == dict[k]['xitem']:
                 listx.append([k,cell.row,dict[k]['value']])
-                dict[k]['yitem']
+                #print dict[k]['yitem']
 
 #                print k,cell.value,cell.row,cell.column 
             
